@@ -18,3 +18,9 @@ In the starting script for using XCLASS outside of CASA (Sec. 1.5)
         sys.path.append(NewModulesPath)
     ```
 * Need to `import os` first in order to use the `os.environ` function.
+
+Section 9:
+* The out-of-casa example script for `myXCLASS` does not have the ploting part, whereas the inside-casa example has.
+
+Page 28:
+* There is no $\nta$

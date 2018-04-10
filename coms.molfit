@@ -1,0 +1,14 @@
+% Number of molecules   5
+%
+% optimize  lower   upper   size(arcsec)    optimize    lower   upper   T_ex   optimize     lower   upper   N_tot(cm-2)     optimize    lower   upper   V_width(km/s)   optimize    lower   upper   V_offset(km/s)  CCFlag
+%
+CH2DOH;v=0;     1
+n           0.0     0.0     0.5             y           50      300     100    y            5e15    1e18    8e+16           y            3.0    8.0     4.981           n           0.0     0.0     0.0             c
+CH3CHO;v15=1;   1
+n           0.0     0.0     0.5             y           50      300     100    y            5e15    1e18    3e+16           y            3.0    8.0     6.857           n           0.0     0.0     0.0             c
+S2O;v=0;        1
+n           0.0     0.0     0.5             y           50      300     100    y            5e15    1e18    2e+17           y            3.0    8.0     6.857           n           0.0     0.0     0.0             c
+CH3OCHO;v=0;    1
+n           0.0     0.0     0.5             y           50      300     100    y            1e14    1e17    5e+15           y            3.0    8.0     3.561           n           0.0     0.0     0.0             c
+CH3NH2;v=0;     1
+n           0.0     0.0     0.5             y           50      300     100    y            5e15    1e18    6e+16           y            3.0    8.0     6.205           n           0.0     0.0     0.0             c
