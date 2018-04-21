@@ -36,7 +36,7 @@
 
 
         <!-- set path and name of host file -->
-        <MPIHostFileName> </MPIHostFileName>
+        <MPIHostFileName> mpi_hostfile.txt </MPIHostFileName>
 
 
         <!-- settings for chi^2 -->
@@ -67,7 +67,7 @@
 
 
         <!-- set path and name of host file -->
-        <MPIHostFileName> </MPIHostFileName>
+        <MPIHostFileName> mpi_hostfile.txt </MPIHostFileName>
 
 
         <!-- settings for chi^2 -->
@@ -98,7 +98,7 @@
 
 
         <!-- set path and name of host file -->
-        <MPIHostFileName> </MPIHostFileName>
+        <MPIHostFileName> mpi_hostfile.txt </MPIHostFileName>
 
 
         <!-- settings for chi^2 -->
