@@ -1,86 +1,32 @@
-% Number of molecules   6
-%
-% optimize  lower   upper   size(arcsec)    optimize    lower   upper   T_ex   optimize     lower   upper   N_tot(cm-2)     optimize    lower   upper   V_width(km/s)   optimize    lower   upper   V_offset(km/s)  CCFlag
-%
-% Methyl Formate
 CH3OCHO;v=0;    1
 n           0.0     0.0     0.5             y           50      300      40    y            1e14    1e17    8e+17           y            3.0    8.0     3.561           n           0.0     0.0     0.0             c
-% Acetaldehyde
 CH3CHO;v15=1;   1
 n           0.0     0.0     0.5             y           50      300     100    y            5e15    1e18    1.5e+16           y            3.0    8.0     3.000           n           0.0     0.0     0.0             c
-% Methanol
 C-13-H3OH;v=0;  1
 n           0.0     0.0     0.5             y           50      300     100    y            5e15    1e18    1e+16           y            3.0    8.0     3.443           n           0.0     0.0     0.0             c
 CH2DOH;v=0;     1
 n           0.0     0.0     0.5             y           50      300     100    y            5e15    1e18    8e+16           y            3.0    8.0     3.441           n           0.0     0.0     0.0             c
 CH3OH;v=0;  1
 n           0.0     0.0     0.5             y           50      300     100    y            5e15    1e18    3e+18           y            3.0    8.0     4.131           n           0.0     0.0     0.0             c
-% Sulfur Dioxide
 SO2;v=0;        1
 n           0.0     0.0     0.5             y           50      300     100    y            5e15    1e18    3e+15           y            3.0    8.0     4.000           n           0.0     0.0     0.0             c
-% Dimethyl Ether
 CH3OCH3;v=0;    1
 n           0.0     0.0     0.5             y           50      300     100    y            5e15    1e18    1e+16           y            3.0    8.0     4.000           n           0.0     0.0     0.0             c
-% Ethanol (trans and gauche)
 C2H5OH;v=0;     1
 n           0.0     0.0     0.5             y           50      300     100    y            5e15    1e18    1e+16           y            3.0    8.0     3.075           n           0.0     0.0     0.0             c
-% Ethyl Cyanide
 C2H5CN;v=0;     1
 n           0.0     0.0     0.5             y           50      300     100    y            5e15    1e18    2e+15           y            3.0    8.0     4.000           n           0.0     0.0     0.0             c
-% Methylamine
 CH3NH2;v=0;     1
 n           0.0     0.0     0.5             y           50      300     100    y            5e15    1e18    5e+16           y            3.0    8.0     4.000           n           0.0     0.0     0.0             c
-% Thioformaldehyde
-H2CS;v=0;       1
-n           0.0     0.0     0.5             y           50      300     100    y            4e14    1e18    9e+14           y            3.0    8.0     3.000           n           0.0     0.0     0.0             c
-% Formyl radical
 HCO;v=0;        1
 n           0.0     0.0     0.5             y           50      300     100    y            5e15    1e18    8e+16           y            3.0    8.0     3.000           n           0.0     0.0     0.0             c
-% Acetone
 CH3COCH3;v=0;   1
 n           0.0     0.0     0.5             y           50      300     100    y            5e15    1e18    4e+15           y            3.0    8.0     3.000           n           0.0     0.0     0.0             c
-% Methyl Cyanide
 CH2DCN;v=0;	    1
 n           0.0     0.0     0.5             y           50      300     100    y            5e15    1e18    6e+15           y            3.0    8.0     3.000           n           0.0     0.0     0.0             c
-% Aminoethanol
 NH2CH2CH2OH;v25=1;  1
 n           0.0     0.0     0.5             y           50      300     100    y            5e15    1e18    6e+17           y            3.0    8.0     3.000           n           0.0     0.0     0.0             c
-% Nitric acid
-% HNO3;v=0;   1
-% n           0.0     0.0     0.5             y           50      300     100    y            5e15    1e18    6e+15           y            3.0    8.0     3.000           n           0.0     0.0     0.0             c
-% Ethylene Glycol
-% aGg'-(CH2OH)2;v=0;  1
-% n           0.0     0.0     0.5             y           50      300     100    y            5e15    1e18    8e+15           y            3.0    8.0     3.000           n           0.0     0.0     0.0             c
-% n-Propanol
-% Ga-n-C3H7OH;v=0;    1
-% n           0.0     0.0     0.5             y           50      300     100    y            5e15    1e18    8e+15           y            3.0    8.0     3.000           n           0.0     0.0     0.0             c
-% Vinyl Cyanide
 H2CCCHCN;v=0;	    1
 n           0.0     0.0     0.5             y           50      300     100    y            5e15    1e18    8e+15           y            3.0    8.0     3.000           n           0.0     0.0     0.0             c
-% Glycolaldehyde
-% HCOCH2OH;v18=1;     1
-% n           0.0     0.0     0.5             y           50      300     100    y            5e15    1e18    8e+17           y            3.0    8.0     3.000           n           0.0     0.0     0.0             c
-% Thiozone
-% S3;v=0;             1
-% n           0.0     0.0     0.5             y           50      300     100    y            5e15    1e18    1e+17           y            3.0    8.0     3.000           n           0.0     0.0     0.0             c
-% Bromine dioxide
-% OBr-81-O;v=0;       1
-% n           0.0     0.0     0.5             y           50      300     100    y            5e15    1e18    1e+15           y            3.0    8.0     3.000           n           0.0     0.0     0.0             c
-% Formamide
-% NH2CHO;v=0;     1
-% n           0.0     0.0     0.5             y           50      300     100    y            5e14    1e18    8e+14           y            3.0    8.0     4.000           n           0.0     0.0     0.0             c
-% Hydroxyacetone
-% C3H6O2;v=0;     1
-% n           0.0     0.0     0.5             y           50      300     100    y            5e15    1e18    1e+16           y            3.0    8.0     3.000           n           0.0     0.0     0.0             c
-% Propane
-% C3H8;v=0;       1
-% n           0.0     0.0     0.5             y           50      500     100    y            5e15    1e18    5e+18           y            3.0    8.0     3.000           n           0.0     0.0     0.0             c
-% Disulfurmonoxide
-% S2O;v=0;    1
-% n           0.0     0.0     0.5             y           50      300     100    y            5e15    1e18    6e+15           y            3.0    8.0     3.000           n           0.0     0.0     0.0             c
-% Dihydroxyacetone
 C3O3H6;v=0;     1
 n           0.0     0.0     0.5             y           50      300     100    y            5e15    1e18    1e+15           y            3.0    8.0     4.000           n           0.0     0.0     0.0             c
-% Acetaldehyde
-% CH3CHO;v15=2;   1
-% n           0.0     0.0     0.5             y           50      300     100    y            5e15    1e18    6e+16           y            3.0    8.0     6.857           n           0.0     0.0     0.0             c
