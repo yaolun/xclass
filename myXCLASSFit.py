@@ -48,7 +48,7 @@ data = 'spw0.imcontsub.scriptExtraction.forXCLASS.txt'
 # import task_myXCLASSFit package
 import task_myXCLASSFit
 # call myXCLASSFit function
-MolfitsFileName = os.path.expanduser('~')+'/programs/xclass/coms.molfit'
+MolfitsFileName = os.path.expanduser('~')+'/programs/xclass/coms_spw0.molfit'
 experimentalData = data
 AlgorithmXMLFile = os.path.expanduser('~')+'/programs/xclass/algorithm-settings.xml'
 NumberIteration = 50
