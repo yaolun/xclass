@@ -171,7 +171,7 @@ for i in range(4):
     if args['ch3ocn'] and i == 3:
         foo = open('ch3ocn_spw3.csv').readlines()
         for line in foo:
-            freq_dum = line.strip().split(':')[2]
+            freq_dum = float(line.strip().split(':')[2])
         ax.axvline(freq_dum, linestyle='--', color='r', linewidth=0.7)
 
 SaveFigureFile = 'xclass_spectrum_output_'+os.path.dirname(syn_spec[-1]).split('/')[-1]+'.pdf'
