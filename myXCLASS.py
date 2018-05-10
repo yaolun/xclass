@@ -3,6 +3,11 @@ matplotlib.use('Agg')
 #
 import sys
 import os
+import argparse
+parser = argparse.ArgumentParser(description='Options for myXCLASS')
+parser.add_argument('--ch3ocn', action='store_true',
+                    help='show the frequencies of methyl cyanate lines in the plot')
+args = vars(parser.parse_args())
 
 # get environment variable for XCLASS root directory
 XCLASSRootDir = str(os.environ.get('XCLASSRootDir', ''))
@@ -161,6 +166,13 @@ for i in range(4):
     if i == 3:
         ax.set_xlabel('Frequency [MHz]', fontsize=18)
         ax.set_ylabel(r'T$_{\rm mb}$ [K]', fontsize=18)
+
+    # whether to plot the methyl cyanate locations
+    if ch3ocn:
+        foo = open('ch3ocn_sp3.csv').readlines()
+        for line in foo:
+            freq_dum = line.strip().split(':')[2]
+        ax.axvline(freq_dum, linestyle='--', color='r', linewidth=0.7)
 
 SaveFigureFile = 'xclass_spectrum_output_'+os.path.dirname(syn_spec[-1]).split('/')[-1]+'.pdf'
 fig.tight_layout()
