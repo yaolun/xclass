@@ -7,6 +7,8 @@ import argparse
 parser = argparse.ArgumentParser(description='Options for myXCLASS')
 parser.add_argument('--ch3ocn', action='store_true',
                     help='show the frequencies of methyl cyanate lines in the plot')
+parser.add_argument('--hcnv2', action='store_true',
+                    help='show the frequencies of HCN v2=1 lines in the plot')
 args = vars(parser.parse_args())
 print(args)
 # get environment variable for XCLASS root directory
@@ -173,6 +175,11 @@ for i in range(4):
         for line in foo[1:]:
             freq_dum = float(line.strip().split(':')[2])
             ax.axvline(freq_dum, linestyle='--', color='r', linewidth=0.7)
+    if args['hcnv2'] and i == 0:
+        foo = open('hcn_v2=1.csv').readlines()
+        for line in foo[1:]:
+            freq_dum = float(line.strip().split(':')[2])
+            ax.axvline(freq_dum, linestyle='--', color='b', linewidth=0.7)
 
 SaveFigureFile = 'xclass_spectrum_output_'+os.path.dirname(syn_spec[-1]).split('/')[-1]+'.pdf'
 fig.tight_layout()

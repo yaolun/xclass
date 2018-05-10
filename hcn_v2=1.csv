@@ -1,0 +1,8 @@
+Species:Chemical Name:Freq-MHz:Freq Err:Meas Freq-MHz:Meas Freq Err:Resolved QNs:Log<sub>10</sub> (A<sub>ij</sub>):E_U (K):Quantum Number Code:Linelist
+HCNv2=1:Hydrogen Cyanide:354459.13630:0.0007:::J=4-3,F=4-4,l=1e:-3.93242:1066.90319:203:CDMS
+HCNv2=1:Hydrogen Cyanide:354460.31450:0.0007:::J=4-3,F=4-3,l=1e:-2.75632:1066.90311:203:CDMS
+HCNv2=1:Hydrogen Cyanide:354460.43460:0.0007:::J=4-3,l=1e:-2.72834:1066.90326:202:CDMS
+HCNv2=1:Hydrogen Cyanide:354460.43790:0.0005:::J=4-3,F=3-2,l=1e:-2.76528:1066.90326:203:CDMS
+HCNv2=1:Hydrogen Cyanide:354460.51390:0.0009:::J=4-3,F=5-4,l=1e:-2.72827:1066.90326:203:CDMS
+HCNv2=1:Hydrogen Cyanide:354460.76350:0.0015:::J=4-3,F=3-4,l=1e:-5.62258:1066.90327:203:CDMS
+HCNv2=1:Hydrogen Cyanide:354461.94170:0.0008:::J=4-3,F=3-3,l=1e:-3.82328:1066.90319:203:CDMS
