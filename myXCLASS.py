@@ -168,7 +168,7 @@ for i in range(4):
         ax.set_ylabel(r'T$_{\rm mb}$ [K]', fontsize=18)
 
     # whether to plot the methyl cyanate locations
-    if ch3ocn:
+    if args['ch3ocn']:
         foo = open('ch3ocn_sp3.csv').readlines()
         for line in foo:
             freq_dum = line.strip().split(':')[2]
