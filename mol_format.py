@@ -27,7 +27,9 @@ def mol_format(mol_name, name=True, formula=False):
     ('Propane',             'C3H8 v=0',             'C$_{3}$H$_{8}$ $v=0$'),
     ('Disulfurmonoxide',    'S2O v=0',              'S$_{2}$O $v=0$'),
     ('Dihydroxyacetone',    'C3O3H6 v=0',           'C$_{3}$O$_{3}$H$_{6}$ $v=0$'),
-    ('Acetaldehyde',        'CH3CHO v15=2',         'CH$_{3}$CHO $v_{15}=2$')]
+    ('Acetaldehyde',        'CH3CHO v15=2',         'CH$_{3}$CHO $v_{15}=2$'),
+    ('Propargyl Alcohol',   'HCCCH2OH v=0',         'HCCCH$_{2}$OH $v=0$'),
+    ('Ketene',              'HDCCO v=0',            'HDCCO $v=0$')]
 
     for i, m in enumerate(mol_info):
         if m[1] == mol_name:
@@ -35,3 +37,6 @@ def mol_format(mol_name, name=True, formula=False):
                 return m[0]
             elif formula:
                 return m[2]
+    
+    # in case no match is found.
+    return mol_name
