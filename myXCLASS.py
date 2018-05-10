@@ -169,7 +169,7 @@ for i in range(4):
 
     # whether to plot the methyl cyanate locations
     if args['ch3ocn']:
-        foo = open('ch3ocn_sp3.csv').readlines()
+        foo = open('ch3ocn_spw3.csv').readlines()
         for line in foo:
             freq_dum = line.strip().split(':')[2]
         ax.axvline(freq_dum, linestyle='--', color='r', linewidth=0.7)
