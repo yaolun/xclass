@@ -8,7 +8,7 @@ parser = argparse.ArgumentParser(description='Options for myXCLASS')
 parser.add_argument('--ch3ocn', action='store_true',
                     help='show the frequencies of methyl cyanate lines in the plot')
 args = vars(parser.parse_args())
-
+print(args)
 # get environment variable for XCLASS root directory
 XCLASSRootDir = str(os.environ.get('XCLASSRootDir', ''))
 XCLASSRootDir = XCLASSRootDir.strip()
@@ -168,7 +168,7 @@ for i in range(4):
         ax.set_ylabel(r'T$_{\rm mb}$ [K]', fontsize=18)
 
     # whether to plot the methyl cyanate locations
-    if args['ch3ocn']:
+    if args['ch3ocn'] and i == 3:
         foo = open('ch3ocn_spw3.csv').readlines()
         for line in foo:
             freq_dum = line.strip().split(':')[2]
