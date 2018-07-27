@@ -66,6 +66,8 @@ from mol_format import mol_format
 
 # fixed parameters for myXCLASS
 MolfitsFileName = os.path.expanduser('~')+'/programs/xclass/coms.molfit'
+# the directory contains the observed spectra
+datadir = '/Users/yaolun/GoogleDrive/research/bhr71_infall/analysis/imcontsub/spectra_mean/'
 
 FreqStep = 0.5  # MHz
 TelescopeSize = 0.27
@@ -90,7 +92,7 @@ path_info = {'spw': [], 'filepath': [], 'mol_name': []}
 syn_spec = []
 
 for spw in spws:
-    data = 'spw'+spw+'.imcontsub.scriptExtraction.forXCLASS.txt'
+    data = datadir+'spw'+spw+'.imcontsub.scriptExtraction.forXCLASS.txt'
     NumHeaderLines = 0
     restfreq = 0
     vlsr = 0
@@ -110,7 +112,10 @@ for spw in spws:
     # get the intensities of each species from myXCLASS results
     intensity_files = glob.glob(jobDir+'intensity*.dat')
     for i, species in enumerate(intensity_files):
-        mol_name = ' '.join(species.split('intensity')[1].split('comp')[0][2:-3].split('_'))
+        # use the molecule name in the file
+        with open(species, 'r') as f:
+            mol_name = ' '.join(f.readlines()[0].strip()[27:].split(';')[:-1])
+        # mol_name = ' '.join(species.split('intensity')[1].split('comp')[0][2:-3].split('_'))
 
         path_info['spw'].append(spw)
         path_info['filepath'].append(species)
@@ -127,7 +132,7 @@ for i, mol in enumerate(mol_list):
         linestyle = '--'
     else:
         linestyle = '-'
-    p, = plt.plot([], [], linestyle=linestyle, label=mol_format(mol, formula=True, name=False))
+    p, = plt.plot([], [], linestyle=linestyle, linewidth=1.5, label=mol_format(mol, format='formula'))
     legend.append(p)
     plot_params['mol_name'].append(mol)
     plot_params['color'].append(p.get_color())
@@ -140,7 +145,7 @@ fig = plt.figure(figsize=(12, 15))
 
 for i in range(4):
     ax = fig.add_subplot(411+int(i))
-    obs = ascii.read('spw'+str(i)+'.imcontsub.scriptExtraction.forXCLASS.txt', names=['freq(MHz)', 'temp(K)'])
+    obs = ascii.read(datadir+'spw'+str(i)+'.imcontsub.scriptExtraction.forXCLASS.txt', names=['freq(MHz)', 'temp(K)'])
     ax.plot(obs['freq(MHz)'], obs['temp(K)'], label='observation', color='thistle', linewidth=0.7)
 
     # integrated Spectrum
@@ -156,7 +161,7 @@ for i in range(4):
                 linestyle=plot_params['linestyle'][plot_params['mol_name'] == mol_name][0], linewidth=1.5)
 
     ax.set_xlim([obs['freq(MHz)'].min(), obs['freq(MHz)'].max()])
-    ax.set_ylim([-5,10])
+    ax.set_ylim([-2,4])
     ax.minorticks_on()
     [ax.spines[axis].set_linewidth(1.5) for axis in ['top','bottom','left','right']]
     ax.tick_params('both',labelsize=16,width=1.5,which='major',pad=5,length=5)
@@ -167,7 +172,7 @@ for i in range(4):
         ax.legend(handles=legend, loc='upper center', fontsize=12, ncol=5, bbox_to_anchor=(0.5, 1.4))
     if i == 3:
         ax.set_xlabel('Frequency [MHz]', fontsize=18)
-        ax.set_ylabel(r'T$_{\rm mb}$ [K]', fontsize=18)
+        ax.set_ylabel(r'$T_{\rm mb}$ [K]', fontsize=18)
 
     # whether to plot the methyl cyanate locations
     if args['ch3ocn'] and i == 3:
