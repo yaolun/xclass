@@ -60,7 +60,7 @@ from mol_format import mol_format
 # fixed parameters for myXCLASS
 MolfitsFileName = os.path.expanduser('~')+'/programs/xclass/coms.molfit'
 # the directory contains the observed spectra
-if os.path.expanduser('~'):
+if 'bettyjo' in os.path.expanduser('~'):
     datadir = '/home/bettyjo/yaolun/alma_workign_data/'
 else:
     datadir = '/Users/yaolun/GoogleDrive/research/bhr71_infall/analysis/imcontsub/spectra_mean/'
